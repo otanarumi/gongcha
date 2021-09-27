@@ -1,0 +1,42 @@
+.note {
+    background: $beige;
+    padding: 50px 20px 20px;
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        color: $brown;
+    }
+    &__scroll {
+        padding: 10px;
+        height: 200px;
+        background: #fff;
+        overflow-y: scroll;
+        pre {
+            white-space: pre-wrap ;
+            line-height: 1.7;
+        }
+    }
+    &__gotop {
+        text-align: center;
+        margin: 60px 0 0;
+        a {
+            position: relative;
+            color: $brown;
+            font-size: 1.6rem;
+            &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: -30px;
+                left: calc(50% - 10px);
+                width: 20px;
+                height: 20px;
+                border-top: 2px solid $brown;
+                border-right: 2px solid $brown;
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+}

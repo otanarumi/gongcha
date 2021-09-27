@@ -1,0 +1,172 @@
+.select {
+    width: 100%;
+    background: linear-gradient(to bottom,transparent 90%, $bg_red 100%), url(../images/select_bg_sp.png);
+    background-color: $bg_red;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    @include md {
+        background: linear-gradient(to bottom, $bg_red 0%,transparent 10%,transparent 90%, $bg_red 100%), url(../images/select_bg.png);
+        background-size: 100%;
+    }
+    &__inner {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    &__title {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        >img {
+            max-width: 80%;
+        }
+    }
+    &__block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 200px auto 0;
+        @include md {
+            flex-wrap: wrap;
+            margin: 50px auto 0;
+        }
+    }
+    &__wrap {
+        width: 90%;
+        margin: 0 auto 10px;
+    }
+    &__item {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        &-img {
+            width: 40%;
+        }
+        &-txt {
+            width: 60%;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+                margin-top: 5px;
+            }
+            @include md {
+                padding: 20px 0;
+            }
+        }
+        &-btn {
+            width: 100%;
+            margin-top: 5px;
+            display: flex;
+            button {
+                width: 100%;
+                margin: 0 3px;
+                position: relative;
+                color: #fff !important;
+                border-radius: 3px;
+                padding: 4px 4px 4px 20px;
+                font-size: 14px;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                @include md {
+                    font-size: 16px;
+                    margin: 0 10px;
+                }
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    content: "";
+                    width: 20px;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 80%;
+                    @include md {
+                        left: 5px;
+                    }
+                }
+            }
+            button:nth-child(1){
+                background-color: $beige;
+                &::after {
+                    background-image: url(../images/glass.png);
+                }
+            }
+            button:nth-child(2){
+                background-color: $red;
+                &::after {
+                    background-image: url(../images/check.png);
+                }
+            }
+        }
+        &-secret,&-tweet {
+            position: relative;
+            transition: all .3s;
+            height: auto;
+            opacity: 1;
+            margin-bottom: 30px;
+            &::before {
+                position: absolute;
+                top: -11px;
+                display: block;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: inherit;
+                transform: rotate(45deg);
+            }
+            &.hide {
+                height: 0;
+                opacity: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        &-secret {
+            background: $beige;
+            color: #fff;
+            padding: 15px 10px;
+            &::before {
+                left: 50%;
+            }
+        }
+        &-tweet {
+            background: $red;
+            padding: 15px 5px;
+            color: #fff;
+            &::before {
+                left: 80%;
+            }
+            p {
+                text-align: center;
+                font-size: 0.75rem;
+            }
+            &-btnblock {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        border-top: 2px solid #fff;
+                        border-right: 2px solid #fff;
+                        transform: rotate(45deg) translateX(-5px);
+                    }
+                }
+                a {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import 'mixin','colors','floating','mv','select','join','note','footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Hiragino Mincho ProN','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+    background: $bg_red;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.ex-sp {
+    display: block;
+    @include md {
+        display: none;
+    }
+}
+
+.ex-pc {
+    display: none;
+    @include md {
+        display: block;
+    }
+}

@@ -1,29 +1,37 @@
 .note {
-    background: $beige;
+    background: linear-gradient(to right,$side_beige,$center_beige 40%,$center_beige 60%, $side_beige);
     padding: 50px 20px 20px;
     h2 {
         text-align: center;
         margin-bottom: 20px;
         font-size: 1.3rem;
         color: $brown;
+        letter-spacing: 5px;
+        font-weight: normal;
     }
     &__scroll {
-        padding: 10px;
-        height: 200px;
+        max-width: 600PX;
+        margin: 0 auto;
+        padding: 20px;
+        height: 400px;
         background: #fff;
         overflow-y: scroll;
         pre {
+            font-family: Noto Sans JP, sans-serif;
             white-space: pre-wrap ;
             line-height: 1.7;
         }
     }
     &__gotop {
         text-align: center;
-        margin: 60px 0 0;
+        margin: 100px 0 30px;
         a {
             position: relative;
             color: $brown;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            @include md {
+                font-size: 1.6rem;
+            }
             &::before {
                 display: block;
                 content: "";

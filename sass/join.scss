@@ -1,5 +1,5 @@
 .join {
-    background-color: $bg_red;
+    background: linear-gradient(to right,$bg_red,$center_red 40%,$center_red 60%, $bg_red);
     background-image: url(../images/join_bg.png);
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
         text-align: center;
         img {
             width: 30%;
-            max-width: 250px;
+            max-width: 200px;
         }
     }
     &__step {
@@ -20,7 +20,7 @@
         margin: 100px auto 0;
         &-item {
             position: relative;
-            background: $step_red;
+            background: linear-gradient(to right,$step_red,$step_red_center 40%,$step_red_center 60%, $step_red);
             text-align: center;
             padding: 50px 0 40px;
             display: flex;
@@ -30,6 +30,7 @@
                 color: #fff;
                 line-height: 1.7;
                 &.caution {
+                    font-size: 0.9rem;
                     margin-top: 10px;
                     color: $yellow;
                 }
@@ -37,11 +38,14 @@
             a {
                 margin: 20px 0 0;
                 img {
-                    width: 80%;
+                    width: 90%;
                 }
             }
             >img {
                 width: 70%;
+                @include md {
+                    width: 50%;
+                }
             }
             &::before {
                 display: block;
@@ -68,27 +72,37 @@
         }
         &-arrow {
             text-align: center;
-            margin: 50px 0 100px;
+            margin: 30px 0 100px;
             img {
-                width: 40px;
+                width: 50px;
+            }
+            &.thin {
+                margin: 30px 0 70px;
             }
         }
         &-present01 {
             position: relative;
-            background-color: $beige;
-            padding: 0 20px 60px;
+            background: linear-gradient(to right,$side_beige,$center_beige 40%,$center_beige 60%, $side_beige);
+            padding: 0 20px 80px;
             p {
                 color: $brown;
+                line-height: 1.5;
             }
             >P:nth-child(1){
                 padding-top: 45%;
                 text-align: center;
+                font-size: 1.2rem;
+                color: $font_brown;
+                @include md {
+                    padding-top: 38%;
+                    font-size: 1.5rem;
+                }
             }
             .image {
                 text-align: center;
                 margin: 20px 0 0;
                 img {
-                    width: 80%;
+                    width: 100%;
                 }
             }
             >P:nth-child(3) {
@@ -97,7 +111,7 @@
             >P:nth-child(4){
                 position: absolute;
                 right: 10px;
-                bottom: 10px;
+                bottom: 15px;
                 text-align: right;
                 font-size: 0.9rem;
             }
@@ -106,7 +120,7 @@
                 content: "";
                 position: absolute;
                 left: calc(50% - calc(90% /2));
-                top: -8%;
+                top: -5.5%;
                 background-image: url(../images/present_01_deco.png);
                 width: 90%;
                 height: 250px;
@@ -118,33 +132,44 @@
         &-present02 {
             margin-top: 20px;
             position: relative;
-            background-color: $beige;
-            padding: 0 20px 60px;
+            background: linear-gradient(to right,$side_beige,$center_beige 40%,$center_beige 60%, $side_beige);
+            padding: 0 20px 80px;
+            display: flex;
+            flex-direction: column;
+            @include md {
+                margin-top: 40px;
+            }
             p {
                 color: $brown;
+                line-height: 1.5;
             }
             .image {
                 text-align: center;
-                padding-top: 40%;
+                padding-top: 45%;
                 margin: 20px 0 0;
                 img {
                     width: 80%;
                 }
             }
             >P:nth-child(2) {
-                margin-top: 20px;
+                margin-top: 30px;
                 text-align: center;
                 font-size: 1.15rem;
+                line-height: 1.5;
+                color: $font_brown;
+                font-family: Noto Sans JP, sans-serif;
                 >b {
                     font-size: 1.2rem;
                     font-weight: bold;
                 }
             }
             >h3:nth-child(3) {
-                margin-top: 15px;
+                width: 100%;
+                margin: 15px auto 0;
                 text-align: center;
                 font-size: 1.2rem;
-                border-bottom: 2px solid $brown;
+                border-bottom: 2px solid $font_brown;
+                color: $font_brown;
             }
             >P:nth-child(4) {
                 margin-top: 10px;
@@ -152,7 +177,7 @@
             >P:nth-child(5){
                 position: absolute;
                 right: 10px;
-                bottom: 10px;
+                bottom: 15px;
                 text-align: right;
                 font-size: 0.9rem;
             }

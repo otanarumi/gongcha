@@ -1,9 +1,19 @@
 .floating {
     position: fixed;
-    top: 300px;
+    top: 500px;
     right: 0px;
     z-index: 4;
+    transition: all .8s;
     img {
         width: 120px;
+    }
+    a:hover {
+        opacity: 1;
+    }
+    @include md {
+        top: 85vh;
+    }
+    &.tobottom {
+        top: 85vh;
     }
 }

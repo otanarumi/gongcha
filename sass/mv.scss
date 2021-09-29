@@ -12,6 +12,9 @@
         left: 10px;
         img {
             width: 50px;
+            @include md {
+                width: 80px;
+            }
         }
     }
 }

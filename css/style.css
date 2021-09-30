@@ -119,6 +119,8 @@
         opacity: 0;
         padding: 0;
         margin: 0; }
+        .select__item-secret.hide a, .select__item-secret.hide p, .select__item-tweet.hide a, .select__item-tweet.hide p {
+          display: none; }
     .select__item-secret {
       background: #B69069;
       color: #fff;

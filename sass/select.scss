@@ -103,6 +103,9 @@
                 opacity: 0;
                 padding: 0;
                 margin: 0;
+                a,p {
+                    display: none;
+                }
             }
         }
         &-secret {
